@@ -1,0 +1,69 @@
+/* (No Commment) */
+"1Qd-JZ-DfP.normalTitle" = "開始";
+
+/* (No Commment) */
+"2Us-Ub-UiD.normalTitle" = "是";
+
+/* (No Commment) */
+"4Cw-c5-hxN.text" = "有來過這裡嗎";
+
+/* Class = "UILabel"; text = "You've dined here. What did you think?"; ObjectID = "4oX-hE-Jks"; */
+"4oX-hE-Jks.text" = "你曾光顧這間店，給點評價吧";
+
+/* (No Commment) */
+"9qt-5y-QtU.title" = "新增餐廳";
+
+/* (No Commment) */
+"B2M-ux-Cx3.title" = "分享";
+
+/* (No Commment) */
+"Dyq-cl-F0a.text" = "類別";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "ENb-Hz-KDQ"; */
+"ENb-Hz-KDQ.text" = "位置";
+
+/* (No Commment) */
+"H5F-Yc-vqe.normalTitle" = "網頁連結";
+
+/* (No Commment) */
+"Kfk-MR-HES.text" = "位置";
+
+/* (No Commment) */
+"LlQ-T9-Vod.placeholder" = "餐廳位置";
+
+/* (No Commment) */
+"Q0C-Pg-iIQ.text" = "名字";
+
+/* (No Commment) */
+"Q08-gg-Qz0.text" = "如有疑問";
+
+/* (No Commment) */
+"ROM-8X-MRU.title" = "分享";
+
+/* (No Commment) */
+"Tgd-o8-c89.title" = "關於我們";
+
+/* (No Commment) */
+"WIv-DN-rOY.normalTitle" = "不是";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Y1Z-og-ut6"; */
+"Y1Z-og-ut6.text" = "名字";
+
+/* (No Commment) */
+"bY2-Uv-3e9.normalTitle" = "聯絡我們";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "eaf-Pa-ITO"; */
+"eaf-Pa-ITO.text" = "類別";
+
+/* (No Commment) */
+"igf-bP-Jhh.text" = "請聯絡我們";
+
+/* (No Commment) */
+"kfU-jO-ECG.placeholder" = "餐廳類別";
+
+/* (No Commment) */
+"piC-2j-ea0.placeholder" = "餐廳名字";
+
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "wld-xE-9KW"; */
+"wld-xE-9KW.normalTitle" = "地圖";
+

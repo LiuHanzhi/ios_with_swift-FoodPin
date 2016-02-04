@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		B5041CEE1BF7296800225293 /* AddTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5041CED1BF7296800225293 /* AddTableTableViewController.swift */; };
 		B5041D311BF7676800225293 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5041D2F1BF7676800225293 /* FoodPin.xcdatamodeld */; };
+		B5041D331BF98F4E00225293 /* PageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5041D321BF98F4E00225293 /* PageContentViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B5041D351BF991BE00225293 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5041D341BF991BE00225293 /* PageViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B5041D371BF9DB8300225293 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5041D361BF9DB8300225293 /* AboutViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B5041D391BF9DC0500225293 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5041D381BF9DC0500225293 /* WebViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B5041D441BFAD38000225293 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5041D461BFAD38000225293 /* InfoPlist.strings */; };
+		B5041D491BFAD38000225293 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5041D4B1BFAD38000225293 /* InfoPlist.strings */; };
+		B5041D4E1BFAD9D700225293 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5041D501BFAD9D700225293 /* Localizable.strings */; };
+		B5041D531BFB162500225293 /* aboutfoodpin.png in Resources */ = {isa = PBXBuildFile; fileRef = B5041D551BFB162500225293 /* aboutfoodpin.png */; };
 		F4444CA319989F2800977F20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4444CA219989F2800977F20 /* AppDelegate.swift */; };
 		F4444CA819989F2800977F20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4444CA619989F2800977F20 /* Main.storyboard */; };
 		F4444CAA19989F2900977F20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4444CA919989F2900977F20 /* Images.xcassets */; };
@@ -37,6 +45,21 @@
 /* Begin PBXFileReference section */
 		B5041CED1BF7296800225293 /* AddTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableTableViewController.swift; sourceTree = "<group>"; };
 		B5041D301BF7676800225293 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		B5041D321BF98F4E00225293 /* PageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentViewController.swift; sourceTree = "<group>"; };
+		B5041D341BF991BE00225293 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		B5041D361BF9DB8300225293 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		B5041D381BF9DC0500225293 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B5041D411BFAD37F00225293 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		B5041D451BFAD38000225293 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B5041D4A1BFAD38000225293 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		B5041D4F1BFAD9D700225293 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B5041D541BFB162500225293 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "zh-Hant.lproj/aboutfoodpin.png"; sourceTree = "<group>"; };
+		B5041D561BFB166300225293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = Base.lproj/aboutfoodpin.png; sourceTree = "<group>"; };
+		B5041D571BFB16CD00225293 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B5041D581BFB16CD00225293 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		B5041D591BFB16CD00225293 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B5041D5A1BFB16CD00225293 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B5041D5C1BFB185E00225293 /* de */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = de; path = de.lproj/aboutfoodpin.png; sourceTree = "<group>"; };
 		F4444C9D19989F2800977F20 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4444CA119989F2800977F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4444CA219989F2800977F20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +134,11 @@
 				F4DF69A519B477F100566C15 /* MapViewController.swift */,
 				B5041CED1BF7296800225293 /* AddTableTableViewController.swift */,
 				B5041D2F1BF7676800225293 /* FoodPin.xcdatamodeld */,
+				B5041D321BF98F4E00225293 /* PageContentViewController.swift */,
+				B5041D341BF991BE00225293 /* PageViewController.swift */,
+				B5041D361BF9DB8300225293 /* AboutViewController.swift */,
+				B5041D381BF9DC0500225293 /* WebViewController.swift */,
+				B5041D551BFB162500225293 /* aboutfoodpin.png */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -118,6 +146,8 @@
 		F4444CA019989F2800977F20 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5041D501BFAD9D700225293 /* Localizable.strings */,
+				B5041D461BFAD38000225293 /* InfoPlist.strings */,
 				F4444CA119989F2800977F20 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -135,6 +165,7 @@
 		F4444CB319989F2900977F20 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5041D4B1BFAD38000225293 /* InfoPlist.strings */,
 				F4444CB419989F2900977F20 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -211,6 +242,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = F4444C9419989F2800977F20;
 			productRefGroup = F4444C9E19989F2800977F20 /* Products */;
@@ -229,6 +261,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4444CA819989F2800977F20 /* Main.storyboard in Resources */,
+				B5041D4E1BFAD9D700225293 /* Localizable.strings in Resources */,
+				B5041D531BFB162500225293 /* aboutfoodpin.png in Resources */,
+				B5041D441BFAD38000225293 /* InfoPlist.strings in Resources */,
 				F4444CAA19989F2900977F20 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5041D491BFAD38000225293 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +292,11 @@
 				F4DF69A619B477F100566C15 /* MapViewController.swift in Sources */,
 				F4444CA319989F2800977F20 /* AppDelegate.swift in Sources */,
 				F47FC97019A33FBD002C4FFA /* DetailTableViewCell.swift in Sources */,
+				B5041D331BF98F4E00225293 /* PageContentViewController.swift in Sources */,
+				B5041D371BF9DB8300225293 /* AboutViewController.swift in Sources */,
+				B5041D351BF991BE00225293 /* PageViewController.swift in Sources */,
 				F48B8D6619AB376700FB4C83 /* ShareViewController.swift in Sources */,
+				B5041D391BF9DC0500225293 /* WebViewController.swift in Sources */,
 				F47FC96A19A1AB03002C4FFA /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,10 +320,49 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B5041D461BFAD38000225293 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5041D451BFAD38000225293 /* zh-Hant */,
+				B5041D591BFB16CD00225293 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B5041D4B1BFAD38000225293 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5041D4A1BFAD38000225293 /* zh-Hant */,
+				B5041D5A1BFB16CD00225293 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B5041D501BFAD9D700225293 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5041D4F1BFAD9D700225293 /* zh-Hant */,
+				B5041D571BFB16CD00225293 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B5041D551BFB162500225293 /* aboutfoodpin.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5041D541BFB162500225293 /* zh-Hant */,
+				B5041D561BFB166300225293 /* Base */,
+				B5041D5C1BFB185E00225293 /* de */,
+			);
+			name = aboutfoodpin.png;
+			sourceTree = "<group>";
+		};
 		F4444CA619989F2800977F20 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F4444CA719989F2800977F20 /* Base */,
+				B5041D411BFAD37F00225293 /* zh-Hant */,
+				B5041D581BFB16CD00225293 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -443,7 +522,7 @@
 				F4444CB819989F2900977F20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F4444CB919989F2900977F20 /* Build configuration list for PBXNativeTarget "FoodPin" */ = {
 			isa = XCConfigurationList;
@@ -452,7 +531,7 @@
 				F4444CBB19989F2900977F20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F4444CBC19989F2900977F20 /* Build configuration list for PBXNativeTarget "FoodPinTests" */ = {
 			isa = XCConfigurationList;
@@ -461,7 +540,7 @@
 				F4444CBE19989F2900977F20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

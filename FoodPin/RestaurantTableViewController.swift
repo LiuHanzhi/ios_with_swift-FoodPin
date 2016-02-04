@@ -9,10 +9,13 @@
 import UIKit
 import CoreData
 
-class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
     var restaurants:[Restaurant] = []
+    var searchResults:[Restaurant] = []
     
     var fetchResultController:NSFetchedResultsController!
+    //搜索controller
+    var searchControler:UISearchController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +44,26 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             let nserror = error as NSError
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
         }
+        
+        //初始化搜索controller
+        searchControler = UISearchController(searchResultsController: nil)
+        searchControler.searchBar.sizeToFit()
+        tableView.tableHeaderView = searchControler.searchBar
+        definesPresentationContext = true
+        
+        searchControler.searchResultsUpdater = self
+        searchControler.dimsBackgroundDuringPresentation = false
+        
+        //首次进入的向导  使用uipageviewcontroller
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let hasViewedWalkthrough = defaults.boolForKey("hasViewedWalkthrough")
+        
+        if !hasViewedWalkthrough {
+            if let pageViewController = storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as? PageViewController {
+                self.presentViewController(pageViewController, animated: true, completion: nil)
+            }
+        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -58,7 +81,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return self.restaurants.count
+        if searchControler.active {
+            return searchResults.count
+        } else {
+            return self.restaurants.count
+        }
     }
 
     
@@ -68,7 +95,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CustomTableViewCell
         
         // Configure the cell...
-        let restaurant = restaurants[indexPath.row]
+        let restaurant = (searchControler.active) ? searchResults[indexPath.row] : restaurants[indexPath.row]
         cell.nameLabel.text = restaurant.name
         cell.thumbnailImageView.image = UIImage(data: restaurant.image)
         cell.locationLabel.text = restaurant.location
@@ -88,13 +115,13 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     }
 
     override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction] {
-        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Share", handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
+        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: NSLocalizedString("Share", comment: "Share tile"), handler: { (action:UITableViewRowAction, indexPath:NSIndexPath) -> Void in
             
-            let shareMenu = UIAlertController(title: nil, message: "Share using", preferredStyle: .ActionSheet)
-            let twitterAction = UIAlertAction(title: "Twitter", style: UIAlertActionStyle.Default, handler: nil)
-            let facebookAction = UIAlertAction(title: "Facebook", style: UIAlertActionStyle.Default, handler: nil)
-            let emailAction = UIAlertAction(title: "Email", style: UIAlertActionStyle.Default, handler: nil)
-            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+            let shareMenu = UIAlertController(title: nil, message: NSLocalizedString("Share using", comment: "For social sharing"), preferredStyle: .ActionSheet)
+            let twitterAction = UIAlertAction(title: NSLocalizedString("Twitter", comment: "share using twitter"), style: UIAlertActionStyle.Default, handler: nil)
+            let facebookAction = UIAlertAction(title: NSLocalizedString("Facebook", comment: "share using facebook"), style: UIAlertActionStyle.Default, handler: nil)
+            let emailAction = UIAlertAction(title: NSLocalizedString("Email", comment: "share using email"), style: UIAlertActionStyle.Default, handler: nil)
+            let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "cancel sharing"), style: UIAlertActionStyle.Cancel, handler: nil)
             
             shareMenu.addAction(twitterAction)
             shareMenu.addAction(facebookAction)
@@ -126,6 +153,14 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         return [deleteAction, shareAction]
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if searchControler.active {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     
     // MARK: - Navigation
 
@@ -134,7 +169,10 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let destinationController = segue.destinationViewController as! DetailViewController
-                destinationController.restaurant = restaurants[indexPath.row]
+                destinationController.restaurant = (searchControler.active) ? searchResults[indexPath.row] : restaurants[indexPath.row]
+                
+                //隐藏tabbar
+                //destinationController.hidesBottomBarWhenPushed = true
             }
         }
     }
@@ -172,6 +210,21 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         tableView.endUpdates()
+    }
+    
+    //更新搜索结果 来自protocol UISearchResultUpdating
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchText = searchControler.searchBar.text
+        filterContentForSearchText(searchText!)
+        
+        tableView.reloadData()
+    }
+    //搜索筛选
+    func filterContentForSearchText(searchText:String) {
+        searchResults = restaurants.filter({ (restaurant:Restaurant) -> Bool in
+            let nameMatch = restaurant.name.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return nameMatch != nil
+        })
     }
 
 

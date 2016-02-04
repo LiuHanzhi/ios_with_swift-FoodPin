@@ -1,0 +1,63 @@
+/* (No Commment) */
+"1Qd-JZ-DfP.normalTitle" = "Erste Schritte";
+
+/* (No Commment) */
+"2Us-Ub-UiD.normalTitle" = "Ja";
+
+/* Class = "UILabel"; text = "You've dined here. What did you think?"; ObjectID = "4oX-hE-Jks"; */
+"4oX-hE-Jks.text" = "Sie haben hier zu Abend gegessen. Was haben Sie gedacht?";
+
+/* (No Commment) */
+"9qt-5y-QtU.title" = "neues Restaurant";
+
+/* (No Commment) */
+"B2M-ux-Cx3.title" = "Feed";
+
+/* (No Commment) */
+"Dyq-cl-F0a.text" = "ART";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "ENb-Hz-KDQ"; */
+"ENb-Hz-KDQ.text" = "Lage";
+
+/* (No Commment) */
+"H5F-Yc-vqe.normalTitle" = "Besuchen Sie unsere Website";
+
+/* (No Commment) */
+"Kfk-MR-HES.text" = "LAGE";
+
+/* (No Commment) */
+"Q0C-Pg-iIQ.text" = "NAME";
+
+/* (No Commment) */
+"Q08-gg-Qz0.text" = "Noch Fragen?";
+
+/* (No Commment) */
+"ROM-8X-MRU.title" = "Feed";
+
+/* (No Commment) */
+"Tgd-o8-c89.title" = "über";
+
+/* (No Commment) */
+"WIv-DN-rOY.normalTitle" = "nicht";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "Y1Z-og-ut6"; */
+"Y1Z-og-ut6.text" = "Name";
+
+/* (No Commment) */
+"bY2-Uv-3e9.normalTitle" = "kontaktieren Sie uns";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "eaf-Pa-ITO"; */
+"eaf-Pa-ITO.text" = "Art";
+
+/* (No Commment) */
+"igf-bP-Jhh.text" = "Sie sind nur einen Fingertipp entfernt";
+
+/* (No Commment) */
+"kfU-jO-ECG.placeholder" = "Restaurant Type";
+
+/* (No Commment) */
+"piC-2j-ea0.placeholder" = "Restaurant Name";
+
+/* Class = "UIButton"; normalTitle = "Map"; ObjectID = "wld-xE-9KW"; */
+"wld-xE-9KW.normalTitle" = "Karte";
+
